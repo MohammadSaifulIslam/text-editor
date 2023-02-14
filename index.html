@@ -7,34 +7,39 @@
     <title>Text editoer</title>
      <script src="https://cdn.tailwindcss.com"></script>
      <script src="https://kit.fontawesome.com/c1c457bca8.js" crossorigin="anonymous"></script>
+     <style>
+      /* main{
+       text-align: justify;
+      } */
+     </style>
 </head>
 <body>
     <header></header>
-    <main>
-        <div class="py-12 w-3/4 m-auto bg-sky-400 rounded-xl drop-shadow-md text-center my-12">
+    <main class="px-6">
+        <div class="py-12 md:w-3/4 bg-sky-400 rounded-xl drop-shadow-md text-center my-12 mx-auto px-5">
             <h1 class="text-white text-4xl font-semibold mb-8">My Text Editor</h1>
-            <div class="border border-black bg-sky-300 rounded p-6 w-3/4 mx-auto ">
-                <div class="icon-group flex justify-between">
-                    <div class="bold-italic-underline-icons flex gap-5">
-                        <i class="fa-solid fa-b cursor-pointer"></i>
-                        <i class="fa-solid fa-italic cursor-pointer"></i>
-                        <i class="fa-solid fa-underline cursor-pointer"></i>
+            <div class="border border-black bg-sky-300 rounded p-6 md:w-3/4 mx-auto ">
+                <div class="icon-group md:flex justify-between items-center ">
+                    <div class="bold-italic-underline-icons flex gap-5 justify-center mb-6 md:mb-0">
+                        <i id="text-bold" class="fa-solid fa-b cursor-pointer"></i>
+                        <i id="text-italic" class="fa-solid fa-italic cursor-pointer"></i>
+                        <i id="text-underline" class="fa-solid fa-underline cursor-pointer"></i>
                     </div>
-                    <div class="text-align flex gap-5">
-                        <i class="cursor-pointer fa-solid fa-align-left"></i>
-                        <i class="cursor-pointer fa-solid fa-align-center"></i>
-                        <i class="cursor-pointer fa-solid fa-align-right"></i>
-                        <i class="cursor-pointer fa-solid fa-align-justify"></i>
+                    <div class="text-align flex gap-5 justify-center mb-6 md:mb-0">
+                        <i id="align-left" class="cursor-pointer fa-solid fa-align-left"></i>
+                        <i id="align-center" class="cursor-pointer fa-solid fa-align-center"></i>
+                        <i id="align-right" class="cursor-pointer fa-solid fa-align-right"></i>
+                        <i id="align-justify" class="cursor-pointer fa-solid fa-align-justify"></i>
                     </div>
-                    <div class="font-case-color-icons flex gap-5">
-                        <input class=" w-10 focus:outline-0 px-1 bg-inherit" type="number" name="" id="" value="18">
-                        <p class="cursor-pointer">aA</p>
-                        <input type="color" name="" id="">
+                    <div class="font-case-color-icons flex gap-5 justify-center mb-6 md:mb-0">
+                        <input id="font-size" class=" w-10 focus:outline-0 px-1 bg-inherit" type="number" name="" value="18">
+                        <p id="lower-upper-case" class="cursor-pointer">aA</p>
+                        <input  id="text-color" type="color" name="">
                     </div>
                 </div>
                 <hr class="mt-6 mb-3 border-black">
                 <div class="text-aria ">
-                    <textarea name="" id="" class="w-full focus:outline-0 resize-none"  rows="10"></textarea>
+                    <textarea name="" id="text-aria" class="w-full focus:outline-0 resize-none"  rows="10"></textarea>
                 </div>
                 
             </div>
@@ -42,5 +47,10 @@
         </div>
     </main>
     <footer></footer>
+
+
+    <!-- js file link -->
+    <script src="js/utility.js"></script>
+    <script src="js/text-style.js"></script>
 </body>
 </html>
